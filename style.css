@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
+    color: var(--text-col);
 }
 
 .selected,
@@ -22,10 +23,21 @@ a:hover{
     color: var(--primary-col) !important;
 }
 
+button{
+    background-color: var(--primary-col);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
 body{
     background-color: var(--background-col);
     margin: 10px 450px;
 }
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
 
 nav{
     display: flex;
@@ -43,14 +55,54 @@ nav{
 .nav-link{
     margin: 0 15px;
     text-decoration: none;
-    color: var(--text-col);
 }
 
 .nav-cta{
     padding: 5px 25px;
     background-color: var(--secondary-col);
     border-radius: 15px;
-    color: var(--text-col);
     text-decoration: none;
     font-weight: bolder;
 }
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+main{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+main > p{
+    text-align: center;
+}
+
+.pricing-container{
+    background-color: var(--text-col);
+    margin: 20px 0;
+    padding: 30px;
+    width: 700px;
+}
+
+.pricing-container h2,
+.pricing-container p{
+    color: var(--background-col);
+}
+
+.pricing-input{
+    width: 100%;
+}
+
+.pricing-input input[type="range"]{
+    width: 75%;
+}
+
+.pricing-input input[type="number"]{
+    margin-left: 30px;
+    width: 10%;
+}
+
