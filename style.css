@@ -1,3 +1,20 @@
-body{
-    background-color: rgb(33, 33, 33);
+:root{
+    --background-col: hsl(0, 0%, 13%);
+    --primary-col: hsl(16, 81%, 58%);
+    /* --secondary-col: hsla(0, 18%, 91%, 0.251); */
+    --secondary-col: hsl(0, 1%, 34%);
+    --text-col: hsl(0, 0%, 100%);
 }
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--background-col)
+}
+
