@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 :root{
     --background-col: hsl(0, 0%, 13%);
     --primary-col: hsl(16, 81%, 58%);
@@ -12,9 +14,43 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.selected,
+a:hover{
+    color: var(--primary-col) !important;
 }
 
 body{
-    background-color: var(--background-col)
+    background-color: var(--background-col);
+    margin: 10px 450px;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-link{
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text-col);
+}
+
+.nav-cta{
+    padding: 5px 25px;
+    background-color: var(--secondary-col);
+    border-radius: 15px;
+    color: var(--text-col);
+    text-decoration: none;
+    font-weight: bolder;
+}
