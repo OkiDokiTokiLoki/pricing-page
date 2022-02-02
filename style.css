@@ -5,6 +5,7 @@
     --primary-col: hsl(16, 81%, 58%);
     /* --secondary-col: hsla(0, 18%, 91%, 0.251); */
     --secondary-col: hsl(0, 1%, 34%);
+    --hover-col: hsla(0, 0%, 31%, 0.251);
     --text-col: hsl(0, 0%, 100%);
 }
 
@@ -39,6 +40,7 @@ body{
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
+/* Navigation */
 
 nav{
     display: flex;
@@ -54,22 +56,43 @@ nav{
 }
 
 .nav-link{
-    margin: 0 15px;
+    margin: 0 5px;
+    padding: 15px 25px;
     text-decoration: none;
 }
 
-.nav-cta{
+.nav-link:hover{
+    color: #fff !important;
+    background-color: var(--hover-col);
+}
+
+.li-cta{
     padding: 5px 25px;
     background-color: var(--secondary-col);
     border-radius: 15px;
+}
+
+.li-cta:hover{
+    background-color: #fff;
+}
+
+.nav-cta{
     text-decoration: none;
     font-weight: bolder;
+    display: inline-block;
+    transition: all 100ms ease;
+}
+
+.nav-cta:hover{
+    transform: scale(.9) !important;
+    color: var(--background-col) !important;
 }
 
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
+/* Main section */
 
 main{
     margin: 50px 0;
@@ -84,6 +107,8 @@ main > p{
 }
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+/* Pricing container */
 
 .pricing-container{
     background-color: var(--text-col);
@@ -123,6 +148,8 @@ main > p{
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
+/* Table */
+
 table{
     width: 90%;
 }
@@ -136,3 +163,4 @@ td{
     padding: 10px 0;
     border-bottom: 1px solid var(--secondary-col);
 }
+
