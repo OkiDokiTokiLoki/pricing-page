@@ -33,7 +33,7 @@ button{
 
 body{
     background-color: var(--background-col);
-    margin: 10px 450px;
+    margin: 30px 450px;
 }
 
 
@@ -138,6 +138,7 @@ main > p{
 .pricing-input input[type="number"]{
     margin-left: 30px;
     width: 10%;
+    color: var(--background-col)
 }
 
 .rocket{
