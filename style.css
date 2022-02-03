@@ -40,6 +40,12 @@ body{
 
 /* Navigation */
 
+header{
+    position: sticky;
+    top: 0;
+    background-color: var(--background-col);
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -133,7 +139,7 @@ main > p{
 /* custom slider */
 .pricing-input input[type="range"]{
     -webkit-appearance: none;
-    width: 85%;
+    width: 80%;
 }
 
 .pricing-input input[type="range"]:focus,
@@ -175,9 +181,12 @@ main > p{
 /* custom number input*/
 .pricing-input input[type="number"]{
     margin-left: 30px;
+    padding: 5px 15px;
+    background-color: var(--primary-col);
+    border: 0;
+    border-radius: 50px;
     text-align: center;
-    width: 8%;
-    color: var(--background-col)
+    font-size: 16px;
 }
 
 .pricing-input input::-webkit-outer-spin-button,
@@ -192,7 +201,7 @@ main > p{
 
 .rocket{
     position: absolute;
-    left: 25%;
+    left: 26%;
     top: 23%;
 }
 
@@ -205,6 +214,8 @@ table{
 }
 
 th{
+    font-size: 24px;
+    font-weight: lighter;
     text-align: left;
 }
 
