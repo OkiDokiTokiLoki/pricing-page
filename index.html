@@ -49,8 +49,8 @@
         <div class="pricing-container">
             <h2>How many employees does your company have?</h2>
             <div class="pricing-input">
-                <input type="range" min="1" max="5000" id="rangeInput" oninput="employeeCount.value=rangeInput.value" onchange="updatePrice()">
-                <input type="number" min="1" max="5000" id="employeeCount" oninput="rangeInput.value=employeeCount.value"  onchange="updatePrice()">
+                <input type="range" min="1" max="5000" id="rangeInput">
+                <input type="number" min="1" max="5000" id="employeeCount" placeholder="500">
             </div>
             <p>Move the slider, or input number, to see your price</p>
         </div>
@@ -66,7 +66,7 @@
             <tr>
                 <td>Pricing</td>
                 <td class="price-display">$0</td>
-                <td class="price-display" id="planAmount">$10 <span>per user<br>billed annually*</span></td>
+                <td class="price-display" id="planAmount">$10<span> per user<br>billed annually*</span></td>
             </tr>
             <tr>
                 <td></td>
