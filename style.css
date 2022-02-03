@@ -36,8 +36,6 @@ body{
     margin: 30px 450px;
 }
 
-
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 /* Navigation */
@@ -56,9 +54,9 @@ nav{
 }
 
 .nav-link{
-    margin: 0 5px;
     padding: 15px 25px;
     text-decoration: none;
+    transition: 250ms ease;
 }
 
 .nav-link:hover{
@@ -67,9 +65,9 @@ nav{
 }
 
 .li-cta{
-    padding: 5px 25px;
     background-color: var(--secondary-col);
     border-radius: 15px;
+    transition: all 250ms ease;
 }
 
 .li-cta:hover{
@@ -77,10 +75,13 @@ nav{
 }
 
 .nav-cta{
+    padding: 5px 25px;
     text-decoration: none;
+    font-size: 14px;
     font-weight: bolder;
     display: inline-block;
-    transition: all 100ms ease;
+    transition: all 150ms ease;
+    border-radius: 15px;
 }
 
 .nav-cta:hover{
@@ -88,8 +89,6 @@ nav{
     color: var(--background-col) !important;
 }
 
-
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 /* Main section */
@@ -117,7 +116,7 @@ main > p{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 700px;
+    width: 630px;
     height: 165px;
     border-radius: 6px;
 }
@@ -131,14 +130,64 @@ main > p{
     width: 100%;
 }
 
+/* custom slider */
 .pricing-input input[type="range"]{
-    width: 75%;
+    -webkit-appearance: none;
+    width: 85%;
 }
 
+.pricing-input input[type="range"]:focus,
+.pricing-input input[type="number"]:focus{
+    outline: none;
+}
+
+.pricing-input input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--primary-col);
+    border-radius: 10px;
+    height: 10px;
+}
+
+.pricing-input input[type="range"]::-moz-range-track {
+    background: var(--primary-col);
+    border-radius: 50%;
+    height: 10px;
+}
+
+.pricing-input input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    margin-top: -4px;
+    border: 1px solid var(--primary-col);
+    border-radius: 50%;
+}
+   
+.pricing-input input[type="range"]::-moz-range-thumb {
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    margin-top: -4px;
+    border: 1px solid var(--primary-col);
+    border-radius: 50%;
+}
+
+/* custom number input*/
 .pricing-input input[type="number"]{
     margin-left: 30px;
-    width: 10%;
+    text-align: center;
+    width: 8%;
     color: var(--background-col)
+}
+
+.pricing-input input::-webkit-outer-spin-button,
+.pricing-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.pricing-input input[type=number] {
+    -moz-appearance: textfield;
 }
 
 .rocket{
