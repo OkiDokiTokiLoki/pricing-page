@@ -268,7 +268,8 @@ td button{
     text-transform: uppercase;
 }
 
-table tr:nth-child(2),
-table tr:nth-child(3){
-    border-bottom: 1px solid red !important;
+table tr:nth-child(2) td,
+table tr:nth-child(3) td{
+    padding: 20px 0;
+    border-color: transparent;
 }
