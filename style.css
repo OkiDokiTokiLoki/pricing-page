@@ -19,6 +19,10 @@
     color: var(--text-col);
 }
 
+*::selection{
+    background-color: var(--primary-col);
+}
+
 .selected,
 a:hover{
     color: var(--primary-col) !important;
@@ -147,19 +151,19 @@ main > p{
     outline: none;
 }
 
-.pricing-input input[type="range"]::-webkit-slider-runnable-track {
+.pricing-input input[type="range"]::-webkit-slider-runnable-track{
     background: var(--primary-col);
     border-radius: 10px;
     height: 10px;
 }
 
-.pricing-input input[type="range"]::-moz-range-track {
+.pricing-input input[type="range"]::-moz-range-track{
     background: var(--primary-col);
     border-radius: 50%;
     height: 10px;
 }
 
-.pricing-input input[type="range"]::-webkit-slider-thumb {
+.pricing-input input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance: none;
     height: 17px;
     width: 17px;
@@ -168,8 +172,13 @@ main > p{
     border: 1px solid var(--primary-col);
     border-radius: 50%;
 }
+
+.pricing-input input[type="range"]::-webkit-slider-thumb:hover,
+.pricing-input input[type="range"]::-moz-range-thumb:hover{
+    cursor: pointer;
+}
    
-.pricing-input input[type="range"]::-moz-range-thumb {
+.pricing-input input[type="range"]::-moz-range-thumb{
     height: 17px;
     width: 17px;
     background-color: #fff;
@@ -179,6 +188,10 @@ main > p{
 }
 
 /* custom number input*/
+.pricing-input input[type="number"]::placeholder{
+    color: #fff;
+}
+
 .pricing-input input[type="number"]{
     margin-left: 30px;
     padding: 5px 15px;
@@ -190,12 +203,12 @@ main > p{
 }
 
 .pricing-input input::-webkit-outer-spin-button,
-.pricing-input input::-webkit-inner-spin-button {
+.pricing-input input::-webkit-inner-spin-button{
     -webkit-appearance: none;
     margin: 0;
 }
 
-.pricing-input input[type=number] {
+.pricing-input input[type=number]{
     -moz-appearance: textfield;
 }
 
@@ -225,3 +238,37 @@ td{
     border-bottom: 1px solid var(--secondary-col);
 }
 
+.price-display{
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.price-cell{
+    position: relative;
+}
+
+#planAmount{
+    position: absolute;
+    top: 16%;
+}
+
+.price-span{
+    display: inline-block;
+    margin-left: 5em;
+    font-size: 14px;
+    color: #aaa;
+}
+
+td button{
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(2),
+table tr:nth-child(3){
+    border-bottom: 1px solid red !important;
+}
