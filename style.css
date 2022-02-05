@@ -249,20 +249,20 @@ td{
     position: relative;
 }
 
-#planAmount{
+#priceDisplay{
     position: absolute;
-    top: 16%;
+    top: 25%;
 }
 
 .price-span{
     display: inline-block;
-    margin-left: 5em;
+    margin-left: 8em;
     font-size: 14px;
     color: #aaa;
 }
 
 td button{
-    width: 100%;
+    width: 85%;
     padding: 8px 0;
     border-radius: 50px;
     font-size: 16px;
