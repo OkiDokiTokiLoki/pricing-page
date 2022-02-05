@@ -5,6 +5,7 @@
     --primary-col: hsl(16, 81%, 58%);
     /* --secondary-col: hsla(0, 18%, 91%, 0.251); */
     --secondary-col: hsl(0, 1%, 34%);
+    --border-col: hsl(0, 0%, 25%);
     --hover-col: hsla(0, 0%, 31%, 0.251);
     --text-col: hsl(0, 0%, 100%);
 }
@@ -48,6 +49,7 @@ header{
     position: sticky;
     top: 0;
     background-color: var(--background-col);
+    z-index: 10;
 }
 
 nav{
@@ -226,6 +228,11 @@ table{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid var(--border-col);
 }
 
 th{
@@ -236,8 +243,11 @@ th{
 
 th,
 td{
-    padding: 10px 0;
-    border-bottom: 1px solid var(--secondary-col);
+    padding: 15px 0;
+}
+
+.tick{
+    text-align: center;
 }
 
 .price-display{
@@ -262,7 +272,8 @@ td{
 }
 
 td button{
-    width: 85%;
+    width: 300px;
+    margin: 20px 0;
     padding: 8px 0;
     border-radius: 50px;
     font-size: 16px;
@@ -270,11 +281,16 @@ td button{
     text-transform: uppercase;
 }
 
-table tr:nth-child(2) td,
-table tr:nth-child(3) td{
-    padding: 20px 0;
+table tr:nth-child(2),
+table tr:nth-child(3){
     border-color: transparent;
 }
+
+table tr:last-child{
+    border-color: transparent;
+}
+
+
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
