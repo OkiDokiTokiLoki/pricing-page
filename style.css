@@ -272,7 +272,7 @@ td{
 }
 
 td button{
-    width: 300px;
+    width: 250px;
     margin: 20px 0;
     padding: 8px 0;
     border-radius: 50px;
@@ -290,8 +290,24 @@ table tr:last-child{
     border-color: transparent;
 }
 
-
-
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 /* form */
+
+section{
+    margin-top: 50px        ;
+    text-align: center;
+    width: 55%;
+}
+
+h3{
+    font-size: 30px;
+}
+
+form ul{
+    list-style: none;
+}
+
+.form-top{
+    display: flex;
+}
