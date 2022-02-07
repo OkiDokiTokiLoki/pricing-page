@@ -313,4 +313,34 @@ form ul{
 
 .form-top{
     display: flex;
+    justify-content: center;
+}
+
+form input,
+form select{
+    margin: 50px 30px;
+    padding: 5px;
+    background-color: var(--secondary-col);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+form input:focus-visible,
+form select:focus-visible{
+    outline: 1px solid transparent;
+}
+
+form input:focus,
+form select:focus{
+    border: 1px solid var(--primary-col)
+}
+
+form input::placeholder{
+    color: #fff;
+}
+
+select option:hover {
+    box-shadow: 0 0 10px 100px #18a830 inset;
 }
