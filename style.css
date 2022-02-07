@@ -5,7 +5,7 @@
     --primary-col: hsl(16, 81%, 58%);
     /* --secondary-col: hsla(0, 18%, 91%, 0.251); */
     --secondary-col: hsl(0, 1%, 34%);
-    --border-col: hsl(0, 0%, 25%);
+    --border-col: hsl(0, 1%, 18%);
     --hover-col: hsla(0, 0%, 31%, 0.251);
     --text-col: hsl(0, 0%, 100%);
 }
@@ -171,12 +171,8 @@ main > p{
     width: 17px;
     background-color: #fff;
     margin-top: -4px;
-    border: 1px solid var(--primary-col);
+    border: 3px solid var(--primary-col);
     border-radius: 50%;
-}
-
-.pricing-input input[type="range"]::-webkit-slider-thumb:hover,
-.pricing-input input[type="range"]::-moz-range-thumb:hover{
     cursor: pointer;
 }
    
@@ -187,6 +183,7 @@ main > p{
     margin-top: -4px;
     border: 1px solid var(--primary-col);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 /* custom number input*/
@@ -279,6 +276,7 @@ td button{
     font-size: 16px;
     font-weight: bolder;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 table tr:nth-child(2),
@@ -297,11 +295,16 @@ table tr:last-child{
 section{
     margin-top: 50px        ;
     text-align: center;
-    width: 55%;
+    width: 65%;
 }
 
 h3{
-    font-size: 30px;
+    font-size: 37px;
+}
+
+section > p{
+    font-size: 18px;
+    font-weight: lighter;
 }
 
 form ul{
