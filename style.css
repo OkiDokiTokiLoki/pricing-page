@@ -294,8 +294,10 @@ table tr:last-child{
 
 section{
     margin-top: 50px        ;
-    text-align: center;
-    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h3{
@@ -305,6 +307,9 @@ h3{
 section > p{
     font-size: 18px;
     font-weight: lighter;
+    text-align: center;
+    margin: 0 50px;
+    padding: 0 100px;
 }
 
 form ul{
@@ -318,7 +323,7 @@ form ul{
 
 form input,
 form select{
-    margin: 50px 30px;
+    margin: 50px 20px;
     padding: 5px;
     background-color: var(--secondary-col);
     border: 1px solid transparent;
@@ -341,6 +346,17 @@ form input::placeholder{
     color: #fff;
 }
 
-select option:hover {
-    box-shadow: 0 0 10px 100px #18a830 inset;
+.form-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-bottom input{
+    margin: 30px;
+}
+
+.form-bottom input[type="checkbox"]{
+    margin-right: 10px;
+    accent-color: var(--primary-col);
 }
