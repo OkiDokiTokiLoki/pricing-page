@@ -23,6 +23,10 @@
     background-color: var(--primary-col);
 }
 
+ul{
+    list-style: none;
+}
+
 .selected,
 a:hover{
     color: var(--primary-col) !important;
@@ -33,6 +37,12 @@ button{
     border: 1px solid transparent;
     border-radius: 4px;
     padding: 5px 15px;
+    transition: 200ms ease;
+}
+
+button:hover{
+    background-color: #fff;
+    color: var(--background-col);
 }
 
 body{
@@ -323,24 +333,25 @@ section > p{
     padding: 0 100px;
 }
 
-form ul{
-    list-style: none;
-}
-
 .form-top{
     display: flex;
     justify-content: center;
 }
 
-form input,
+.form-top input,
 form select{
-    margin: 50px 20px;
-    padding: 5px;
+    margin: 50px 20px 20px 20px;
+    padding: 10px;
+    width: 300px;
     background-color: var(--medium-gray);
     border: 1px solid transparent;
     border-radius: 6px;
     font-weight: lighter;
     font-size: 18px;
+}
+
+form select{
+    cursor: pointer;
 }
 
 form input:focus-visible,
@@ -354,7 +365,7 @@ form select:focus{
 }
 
 form input::placeholder{
-    color: #fff;
+    color: var(--light-gray);
 }
 
 .form-bottom{
@@ -363,11 +374,22 @@ form input::placeholder{
     align-items: center;
 }
 
-.form-bottom input{
-    margin: 30px;
+.form-bottom li:first-child{
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    color: var(--light-gray);
 }
 
 .form-bottom input[type="checkbox"]{
     margin-right: 10px;
+    cursor: pointer;
     accent-color: var(--primary-col);
+}
+
+.form-bottom button{
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
