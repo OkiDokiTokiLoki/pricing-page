@@ -50,8 +50,6 @@ body{
     margin: 30px 450px;
 }
 
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-
 /* Navigation */
 
 header{
@@ -95,7 +93,7 @@ nav{
     background-color: #fff;
 }
 
-/* Request Demo*/
+/* --Request Demo*/
 .nav-cta{
     padding: 5px 25px;
     text-decoration: none;
@@ -110,8 +108,6 @@ nav{
     transform: scale(.9) !important;
     color: var(--background-col) !important;
 }
-
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 /* Main section */
 
@@ -137,8 +133,6 @@ main > p{
     text-align: center;
 }
 
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-
 /* Pricing container */
 
 .pricing-container{
@@ -162,7 +156,7 @@ main > p{
     width: 100%;
 }
 
-/* custom slider */
+/* --Custom slider */
 .pricing-input input[type="range"]{
     -webkit-appearance: none;
     width: 80%;
@@ -206,7 +200,7 @@ main > p{
     cursor: pointer;
 }
 
-/* custom number input*/
+/* --Custom number input*/
 .pricing-input input[type="number"]::placeholder{
     color: #fff;
 }
@@ -237,8 +231,6 @@ main > p{
     top: 27%;
     height: 20%;
 }
-
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 /* Table */
 
@@ -308,8 +300,6 @@ table tr:nth-child(3){
 table tr:last-child{
     border-color: transparent;
 }
-
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 /* form */
 
