@@ -1,18 +1,18 @@
 const rangeInput = document.querySelector('#rangeInput');
-const numInput = document.querySelector('#employeeCount');
-const price = document.querySelector('#priceDisplay');
-
 rangeInput.addEventListener('input', (e) => {
     numInput.value = e.target.value;
     priceCalc(e);
 })
 
+const numInput = document.querySelector('#employeeCount');
 numInput.addEventListener('input', (e) => {
     rangeInput.value = parseInt(numInput.value);
     priceCalc(e);
 })
 
 function priceCalc(e){
+    const price = document.querySelector('#priceDisplay');
+
     if (e.target.value < 100){
         price.textContent = '$10.00';
     } else if (rangeInput.value < 500 ){
