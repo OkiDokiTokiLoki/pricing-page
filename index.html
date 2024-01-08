@@ -11,11 +11,11 @@
 
     <title>Pricing</title>
 </head>
+
 <body>
-    
     <header>
-        <nav>
-            <ul class="nav-links">
+        <nav class="d-flex align-items-center justify-content-between">
+            <ul class="d-flex align-items-center justify-content-between">
                 <li>
                     <a href="#" class="logo-link">
                         <img src="https://via.placeholder.com/300x80" alt="logo">
@@ -43,13 +43,13 @@
         </nav>
     </header>
 
-    <main>
+    <main class="d-flex flex-column align-items-center">
         <h1>Simple and Affordable Pricing for Everyone</h1>
         <p>Get started with a 14-day free trial. No credit card required!</p>
 
-        <div class="pricing-container">
+        <div class="pricing-container d-flex flex-column justify-content-around">
             <h2>How many employees does your company have?</h2>
-            <div class="pricing-input">
+            <div class="pricing-input d-flex">
                 <input type="range" min="1" max="5000" id="rangeInput">
                 <input type="number" min="1" max="5000" id="employeeCount" placeholder="2500">
             </div>
@@ -59,94 +59,101 @@
         <img src="./rocket.png" class="rocket" alt="pricing-rocket">
 
         <table>
-            <tr>
-                <th>Plans</th>
-                <th>Free</th>
-                <th>Premium</th>
-            </tr>
-            <tr>
-                <td>Pricing</td>
-                <td class="price-display">$0</td>
-                <td class="price-cell"><span class="price-display" id="priceDisplay">$5.00</span><span class="price-span"> per user<br>billed annually*</span></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button>Get started for free</button></td>
-                <td><button>Get started</button></td>
-            </tr>
-            <tr>
-                <td>License</td>
-                <td class="tick">Free</td>
-                <td class="tick">Pro</td>
-            </tr>
-            <tr>
-                <td>Fully White-Labeled Platform</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Unlimited Training Content</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Interactive Quizzes</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Multi-tenant Management System</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Automated Training Campaigns</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Automated Reminders</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Executive Reporting</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Custom Campaign Templates</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Just-In-Time Training</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Automated Reminders</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td>Learning Support Center</td>
-                <td class="tick">✓</td>
-                <td class="tick">✓</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td style="text-align: center;"><button>Get Started for Free</button></td>
-                <td style="text-align: center;"><button>Get Started</button></td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Plans</th>
+                    <th>Free</th>
+                    <th>Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="product-heading">Pricing</th>
+                    <td class="price-display">$0</td>
+                    <td class="price-cell">
+                        <span class="price-display" id="priceDisplay">$5.00</span>
+                        <span class="price-span"> per user<br>billed annually*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button>Get started for free</button></td>
+                    <td><button>Get started</button></td>
+                </tr>
+                <tr>
+                    <th class="product-heading">License</th>
+                    <td class="bold">Free</td>
+                    <td class="bold">Pro</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Fully White-Labeled Platform</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Unlimited Training Content</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Interactive Quizzes</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Multi-tenant Management System</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Automated Training Campaigns</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Automated Reminders</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Executive Reporting</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Custom Campaign Templates</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Just-In-Time Training</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Automated Reminders</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <th class="product-heading">Learning Support Center</th>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button>Get Started for Free</button></td>
+                    <td><button>Get Started</button></td>
+                </tr>
+            </tbody>
         </table>
 
-        <section>
+        <section class="d-flex flex-column align-items-center justify-content-center">
             <h3>Request a Demo or Get in Touch</h3>
             <p>Chat with one of our advisors to get a personalised tour of our platform, answers to any of your questions, and learn how we can help you.</p>
             
             <form action="/" method="post">
-                <ul class="form-top">
+                <ul class="form-top d-flex justify-content-center">
                     <li>
                         <input type="text" placeholder="Name" required>
                     </li>
@@ -162,15 +169,15 @@
                         </select>
                     </li>
                 </ul>
-                <ul class="form-bottom">
+                <ul class="form-bottom d-flex flex-column align-items-center">
                     <li><input type="checkbox" checked>I'd like to subscribe to the latest news updates</li>
-                    <li><button type="submit">SEND</button></li>
+                    <li><button type="submit" class="uppercase">Send</button></li>
                 </ul>       
             </form>
         </section>
     </main>
 
-    <footer style="text-align: center;">
+    <footer>
         <p>©
             <script>
                 document.write(new Date().getFullYear())

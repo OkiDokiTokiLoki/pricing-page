@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 
-:root{
+:root {
     --background-col: hsl(0, 0%, 13%);
     --primary-col: hsl(16, 81%, 58%);
     --medium-gray: hsl(0, 1%, 34%);
@@ -11,90 +11,83 @@
 
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Helvetica, sans-serif;
+    font-family: Montserrat, Helvetica, sans-serif;
     color: #fff;
+    text-align: center;
 }
 
-*::selection{
-    background-color: var(--primary-col);
-}
-
-ul{
-    list-style: none;
-}
-
-.selected,
-a:hover{
-    color: var(--primary-col) !important;
-}
-
-button{
-    background-color: var(--primary-col);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 5px 15px;
-    transition: 200ms ease;
-}
-
-button:hover{
-    background-color: #fff;
-    color: var(--background-col);
-}
-
-body{
+body {
     background-color: var(--background-col);
     margin: 30px 450px;
 }
 
-/* Navigation */
-
-header{
+header {
     position: sticky;
     top: 0;
     background-color: var(--background-col);
     z-index: 10;
 }
 
-nav{
+.d-flex {
     display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-items-center {
     align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
     justify-content: space-between;
 }
 
-.nav-links{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.justify-content-around {
+    justify-content: space-around;
+}
+
+ul {
     list-style: none;
 }
 
-.nav-link{
+.nav-link {
     padding: 15px 25px;
     text-decoration: none;
     transition: 250ms ease;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #fff !important;
     background-color: var(--hover-col);
 }
 
-.li-cta{
+.selected,
+a:hover {
+    color: var(--primary-col) !important;
+}
+
+.li-cta {
     background-color: var(--medium-gray);
     border-radius: 15px;
     transition: all 250ms ease;
 }
 
-.li-cta:hover{
+.li-cta:hover {
     background-color: #fff;
 }
 
 /* --Request Demo*/
-.nav-cta{
+.nav-cta {
     padding: 5px 25px;
     text-decoration: none;
     font-size: 14px;
@@ -104,55 +97,44 @@ nav{
     border-radius: 15px;
 }
 
-.nav-cta:hover{
+.nav-cta:hover {
     transform: scale(.9) !important;
     color: var(--background-col) !important;
 }
 
-/* Main section */
-
-main{
+main {
     margin: 50px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-h1{
+h1 {
     font-size: 42px;
 }
 
-main > p{
+main > p {
     font-size: 22px;
     font-weight: lighter;
     color: var(--light-gray);
 }
 
-h1,
-main > p{
-    text-align: center;
-}
-
-/* Pricing container */
-
-.pricing-container{
+.pricing-container {
     background-color: #fff;
     margin: 50px 0;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 630px;
     height: 165px;
     border-radius: 6px;
 }
 
-.pricing-container h2,
-.pricing-container p{
-    color: var(--background-col);
+.pricing-container h2 {
+    font-size: larger;
 }
 
-.pricing-input{
+.pricing-container h2,
+.pricing-container p {
+    color: var(--background-col);
+    text-align: start;
+}
+
+.pricing-input {
     width: 100%;
 }
 
@@ -163,173 +145,184 @@ main > p{
 }
 
 .pricing-input input[type="range"]:focus,
-.pricing-input input[type="number"]:focus{
+.pricing-input input[type="number"]:focus {
     outline: none;
 }
 
-.pricing-input input[type="range"]::-webkit-slider-runnable-track{
+.pricing-input input[type="range"]::-webkit-slider-runnable-track {
     background: var(--primary-col);
     border-radius: 10px;
     height: 10px;
 }
 
-.pricing-input input[type="range"]::-moz-range-track{
+.pricing-input input[type="range"]::-moz-range-track {
     background: var(--primary-col);
-    border-radius: 50%;
+    border-radius: 50px;
     height: 10px;
 }
 
-.pricing-input input[type="range"]::-webkit-slider-thumb{
+.pricing-input input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 20px;
     width: 20px;
+    aspect-ratio: 1/1;
     background-color: #fff;
     margin-top: -4px;
     border: 3px solid var(--primary-col);
-    border-radius: 50%;
+    border-radius: 50px;
     cursor: pointer;
 }
-   
-.pricing-input input[type="range"]::-moz-range-thumb{
+
+.pricing-input input[type="range"]::-moz-range-thumb {
     height: 20px;
     width: 20px;
     background-color: #fff;
     margin-top: -4px;
     border: 1px solid var(--primary-col);
-    border-radius: 50%;
+    border-radius: 50px;
     cursor: pointer;
 }
 
 /* --Custom number input*/
-.pricing-input input[type="number"]::placeholder{
+.pricing-input input[type="number"]::placeholder {
     color: #fff;
 }
 
-.pricing-input input[type="number"]{
+.pricing-input input[type="number"] {
     margin-left: 30px;
     padding: 5px 15px;
+    width: 5rem;
     background-color: var(--primary-col);
     border: 0;
     border-radius: 50px;
-    text-align: center;
     font-size: 16px;
 }
 
 .pricing-input input::-webkit-outer-spin-button,
-.pricing-input input::-webkit-inner-spin-button{
+.pricing-input input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.pricing-input input[type=number]{
+.pricing-input input[type=number] {
     -moz-appearance: textfield;
 }
 
-.rocket{
+.rocket {
     position: absolute;
     left: 28%;
     top: 27%;
     height: 20%;
 }
 
-/* Table */
-
-table{
+table {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
 }
 
-tr{
+tr {
     border-bottom: 1px solid var(--dark-gray);
 }
 
-th{
+thead tr:first-child th:first-of-type {
+    text-align: start;
+}
+
+th {
     font-size: 24px;
     font-weight: lighter;
-    text-align: left;
 }
 
 th,
-td{
+td {
     padding: 15px 0;
 }
 
-.tick{
-    text-align: center;
+th.product-heading {
+    text-align: start;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
-.price-display{
+.price-display {
     font-size: 36px;
     font-weight: bolder;
 }
 
-.price-cell{
+.price-cell {
     position: relative;
 }
 
-#priceDisplay{
+#priceDisplay {
     position: absolute;
     top: 25%;
 }
 
-.price-span{
+.price-span {
     display: inline-block;
-    margin-left: 8em;
+    margin-left: 8rem;
     font-size: 14px;
+    text-align: start;
     color: #aaa;
 }
 
-td button{
-    width: 250px;
-    margin: 20px 0;
-    padding: 8px 0;
+button {
+    background-color: var(--primary-col);
+    border: 1px solid transparent;
+    transition: 200ms ease;
     border-radius: 50px;
-    font-size: 16px;
-    font-weight: bolder;
-    text-transform: uppercase;
+    font-size: 1rem;
     cursor: pointer;
 }
 
+button:hover {
+    background-color: #fff;
+    color: var(--background-col);
+}
+
+td button {
+    width: 250px;
+    margin: 20px 0;
+    padding: 8px 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 table tr:nth-child(2),
-table tr:nth-child(3){
+table tr:nth-child(3) {
     border-color: transparent;
 }
 
-table tr:last-child{
+table tr:last-child {
     border-color: transparent;
 }
 
-/* form */
+.bold {
+    font-weight: bold;
+}
 
-section{
+.uppercase {
+    text-transform: uppercase;
+}
+
+section {
     margin-top: 50px        ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-h3{
-    font-size: 37px;
+h3 {
+    font-size: xx-large;
 }
 
-section > p{
+section > p {
     font-size: 18px;
     font-weight: lighter;
-    text-align: center;
     margin: 0 50px;
     padding: 0 100px;
 }
 
-.form-top{
-    display: flex;
-    justify-content: center;
-}
-
 .form-top input,
-form select{
+form select {
     margin: 50px 20px 20px 20px;
     padding: 10px;
     width: 300px;
@@ -340,46 +333,37 @@ form select{
     font-size: 18px;
 }
 
-form select{
+form select {
     cursor: pointer;
 }
 
 form input:focus-visible,
-form select:focus-visible{
+form select:focus-visible {
     outline: 1px solid transparent;
 }
 
 form input:focus,
-form select:focus{
+form select:focus {
     border: 1px solid var(--primary-col)
 }
 
-form input::placeholder{
+form input::placeholder {
     color: var(--light-gray);
 }
 
-.form-bottom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-bottom li:first-child{
+.form-bottom li:first-child {
     margin: 0 0 20px 0;
     font-size: 14px;
     color: var(--light-gray);
 }
 
-.form-bottom input[type="checkbox"]{
+.form-bottom input[type="checkbox"] {
     margin-right: 10px;
     cursor: pointer;
     accent-color: var(--primary-col);
 }
 
-.form-bottom button{
+.form-bottom button {
     padding: 10px 30px;
-    border-radius: 50px;
-    font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
 }
