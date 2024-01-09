@@ -1,29 +1,38 @@
 const rangeInput = document.querySelector('#rangeInput');
-rangeInput.addEventListener('input', (e) => {
-    numInput.value = e.target.value;
-    priceCalc(e);
-})
-
 const numInput = document.querySelector('#employeeCount');
-numInput.addEventListener('input', (e) => {
-    rangeInput.value = parseInt(numInput.value);
-    priceCalc(e);
-})
+const priceDisplay = document.querySelector('#priceDisplay');
 
-function priceCalc(e){
-    const price = document.querySelector('#priceDisplay');
+const priceTiers = [
+    { max: 100, price: '$10.00' },
+    { max: 500, price: '$8.00' },
+    { max: 1000, price: '$7.00' },
+    { max: 2000, price: '$6.00' },
+    { max: 3000, price: '$5.00' },
+    { max: Infinity, price: '$4.00' }
+];
 
-    if (e.target.value < 100){
-        price.textContent = '$10.00';
-    } else if (rangeInput.value < 500 ){
-        price.textContent = '$8.00';
-    } else if (rangeInput.value < 1000 ){
-        price.textContent = '$7.00';
-    } else if (rangeInput.value < 2000 ){
-        price.textContent = '$6.00';
-    } else if (rangeInput.value < 3000 ){
-        price.textContent = '$5.00';
-    } else{
-        price.textContent = '$4.00';
-    }
+rangeInput.addEventListener('input', () => syncInputsAndCalculate(rangeInput.value));
+numInput.addEventListener('input', () => syncInputsAndCalculate(numInput.value, true));
+
+function syncInputsAndCalculate(value, isNumInput = false) {
+    const val = parseInt(value, 10);
+    const inputToUpdate = isNumInput ? rangeInput : numInput;
+    inputToUpdate.value = val;
+    priceCalc(val);
 }
+
+function priceCalc(val) {
+    const { price } = priceTiers.find((tier) => val < tier.max) || priceTiers[priceTiers.length - 1];
+    priceDisplay.textContent = price;
+}
+
+(() => {
+    function showMessage() {
+        const overlayDiv = document.querySelector('.overlay');
+        overlayDiv.innerHTML = (window.innerWidth <= 560)
+            ? '<p>This page isn\'t ready for mobile devices just yet.</p>'
+            : '<p>This page isn\'t ready for tablet devices just yet.</p>';
+    };
+    showMessage();
+    window.addEventListener('resize', showMessage);
+})();

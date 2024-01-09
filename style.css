@@ -22,7 +22,6 @@
 
 body {
     background-color: var(--background-col);
-    margin: 30px 450px;
 }
 
 header {
@@ -32,8 +31,43 @@ header {
     z-index: 10;
 }
 
+.d-none {
+    display: none;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color:hsl(233, 57%, 9%);
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 .d-flex {
     display: flex;
+}
+
+@media screen and (min-width: 1920px) {
+    .d-md-none {
+        display: none;
+    }
+    
+    .d-md-block {
+        display: block;
+    }
+}
+
+/* @media screen and (min-width: 1024px) { */
+@media screen and (min-width: 1920px) {
+    body {
+        margin: 30px 450px;
+    }
 }
 
 .flex-column {
@@ -102,7 +136,7 @@ a:hover {
     color: var(--background-col) !important;
 }
 
-main {
+.main {
     margin: 50px 0;
 }
 
@@ -110,7 +144,7 @@ h1 {
     font-size: 42px;
 }
 
-main > p {
+.main > p {
     font-size: 22px;
     font-weight: lighter;
     color: var(--light-gray);
