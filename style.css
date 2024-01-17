@@ -13,8 +13,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     font-family: Montserrat, Helvetica, sans-serif;
     color: #fff;
     text-align: center;
@@ -22,6 +22,19 @@
 
 body {
     background-color: var(--background-col);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        /* margin: 30px 215px; */
+        margin: 30px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        margin-inline: 450px;
+    }
 }
 
 header {
@@ -53,25 +66,11 @@ header {
     display: flex;
 }
 
-@media screen and (min-width: 1920px) {
-    .d-md-none {
-        display: none;
-    }
-    
-    .d-md-block {
-        display: block;
-    }
-}
-
-/* @media screen and (min-width: 1024px) { */
-@media screen and (min-width: 1920px) {
-    body {
-        margin: 30px 450px;
-    }
-}
-
-.flex-column {
-    flex-direction: column;
+.d-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
 }
 
 .align-items-center {
@@ -92,22 +91,38 @@ header {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 .nav-link {
-    padding: 15px 25px;
+    margin-inline: 5px;
+    /* padding: 15px 20px; */
+    padding: 15px 10px;
     text-decoration: none;
+    border-radius: 6px;
     transition: 250ms ease;
 }
 
 .nav-link:hover {
-    color: #fff !important;
+    color: var(--primary-col);
     background-color: var(--hover-col);
+    cursor: pointer;
 }
 
-.selected,
-a:hover {
-    color: var(--primary-col) !important;
+@media screen and (min-width: 1024px) {
+    .nav-link {
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .nav-link {
+        padding: 15px 20px;
+    }
+}
+
+.selected {
+    color: var(--primary-col);
 }
 
 .li-cta {
@@ -132,8 +147,8 @@ a:hover {
 }
 
 .nav-cta:hover {
-    transform: scale(.9) !important;
-    color: var(--background-col) !important;
+    transform: scale(.9);
+    color: var(--background-col);
 }
 
 .main {
@@ -151,11 +166,24 @@ h1 {
 }
 
 .pricing-container {
+    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
     background-color: #fff;
-    margin: 50px 0;
+    margin: 50px 99px;
     padding: 30px;
-    height: 165px;
+    /* height: 165px; */
     border-radius: 6px;
+}
+
+@media screen and (min-width: 1024px) {
+    .pricing-container {
+        margin-inline: 205px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .pricing-container {
+        margin-inline: 200px;
+    }
 }
 
 .pricing-container h2 {
@@ -164,6 +192,7 @@ h1 {
 
 .pricing-container h2,
 .pricing-container p {
+    margin: 0;
     color: var(--background-col);
     text-align: start;
 }
@@ -198,7 +227,7 @@ h1 {
 .pricing-input input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
-    aspect-ratio: 1/1;
+    height: 20px;
     background-color: #fff;
     margin-top: -4px;
     border: 3px solid var(--primary-col);
@@ -243,9 +272,33 @@ h1 {
 
 .rocket {
     position: absolute;
-    left: 28%;
-    top: 27%;
+    top: 50%;
+    left: 5%;
+    /* top: 27%;
+    left: 28%; */
     height: 20%;
+}
+
+@media screen and (min-width: 1024px) {
+    /* .rocket {
+        position: absolute;
+        top: 34%;
+        left: 22%;
+        height: 20%;
+    } */
+    .rocket {
+        top: 42%;
+        left: 11%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .rocket {
+        /* position: absolute; */
+        top: 27%;
+        left: 28%;
+        /* height: 20%; */
+    }
 }
 
 table {
@@ -288,14 +341,8 @@ th.product-heading {
     position: relative;
 }
 
-#priceDisplay {
-    position: absolute;
-    top: 25%;
-}
-
 .price-span {
     display: inline-block;
-    margin-left: 8rem;
     font-size: 14px;
     text-align: start;
     color: #aaa;
@@ -316,11 +363,19 @@ button:hover {
 }
 
 td button {
-    width: 250px;
-    margin: 20px 0;
+    width: 200px;
+    margin: 20px 10px;
     padding: 8px 0;
+    font-size: 14px;
     font-weight: bolder;
     text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    td button {
+        width: 250px;
+        margin-inline: 0;
+    }
 }
 
 table tr:nth-child(2),
@@ -351,20 +406,46 @@ h3 {
 section > p {
     font-size: 18px;
     font-weight: lighter;
-    margin: 0 50px;
-    padding: 0 100px;
+    margin-inline: 30px;
+    /* margin: 0 50px;
+    padding: 0 100px; */
+}
+
+@media screen and (min-width: 1024px) {
+    section > p {
+        margin: 0 50px;
+        padding: 0 100px;
+    }
 }
 
 .form-top input,
 form select {
-    margin: 50px 20px 20px 20px;
-    padding: 10px;
-    width: 300px;
+    /* margin: 50px 20px 20px 20px;
+    padding: 10px; */
+    width: 200px;
+    padding: 5px;
+    margin: 20px 10px;
     background-color: var(--medium-gray);
     border: 1px solid transparent;
     border-radius: 6px;
     font-weight: lighter;
     font-size: 18px;
+}
+
+@media screen and (min-width: 1024px) {
+    .form-top input,
+    form select {
+        margin: 50px 20px 20px 20px;
+        padding: 10px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .form-top input,
+    form select {
+        width: 300px;
+    }
 }
 
 form select {
@@ -401,3 +482,23 @@ form input::placeholder {
     padding: 10px 30px;
     font-weight: bold;
 }
+
+/* @media screen and (min-width: 1920px) { */
+    @media screen and (min-width: 768px) {
+        .d-desktop-none {
+            display: none;
+        }
+        
+        .d-desktop-block {
+            display: block;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .d-lg-none {
+            display: none;
+        }
+        
+        .d-lg-block {
+            display: block;
+        }
+    }

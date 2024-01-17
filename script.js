@@ -29,10 +29,11 @@ function priceCalc(val) {
 (() => {
     function showMessage() {
         const overlayDiv = document.querySelector('.overlay');
-        overlayDiv.innerHTML = (window.innerWidth <= 560)
+        overlayDiv.innerHTML = (window.innerWidth <= 768)
             ? '<p>This page isn\'t ready for mobile devices just yet.</p>'
-            : '<p>This page isn\'t ready for tablet devices just yet.</p>';
+            : null;
     };
     showMessage();
-    window.addEventListener('resize', showMessage);
+
+    window.addEventListener('resize', showMessage());
 })();
