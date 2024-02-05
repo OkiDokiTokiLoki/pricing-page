@@ -7,7 +7,7 @@
 
         <link rel="icon" type="image/x-icon" href="./fav.ico">
         <link rel="stylesheet" href="./style.css">
-        <script src="./script.js" defer></script>
+        <script src="./dist/script.js" defer></script>
 
         <title>Pricing</title>
     </head>
@@ -21,8 +21,8 @@
                     <ul class="d-flex align-items-center justify-content-around">
                         <li>
                             <a class="logo-link" role="button">
-                                <img class="d-lg-none" src="https://via.placeholder.com/150x80" alt="logo">
-                                <img class="d-none d-lg-block" src="https://via.placeholder.com/300x80" alt="logo">
+                                <img class="d-lg-none" src="https://via.placeholder.com/150x80" alt="Company Name Logo">
+                                <img class="d-none d-lg-block" src="https://via.placeholder.com/300x80" alt="Company Name Logo">
                             </a>
                         </li>
                         <li>
@@ -47,16 +47,15 @@
                 </nav>
             </header>
 
-            <!-- <div class="d-grid main"> -->
             <div class="main">
                 <h1>Simple and Affordable Pricing for Everyone</h1>
                 <p>Get started with a 14-day free trial. No credit card required!</p>
 
-                <div class="pricing-container d-grid">
-                    <h2>How many employees does your company have?</h2>
+                <div class="pricing-container">
+                    <h2 class="fs-l">How many employees does your company have?</h2>
                     <div class="pricing-input d-flex">
                         <input type="range" min="1" max="5000" id="rangeInput">
-                        <input type="number" min="1" max="5000" id="employeeCount" placeholder="2500">
+                        <input type="number" min="1" max="5000" id="employeeCount" placeholder="2500" title="">
                     </div>
                     <p>Move the slider, or input number, to see your price</p>
                 </div>
@@ -81,69 +80,64 @@
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><button>Get started for free</button></td>
-                            <td><button>Get started</button></td>
-                        </tr>
-                        <tr>
                             <th class="product-heading">License</th>
-                            <td class="bold">Free</td>
-                            <td class="bold">Pro</td>
-                        </tr>
-                        <tr>
-                            <th class="product-heading">Fully White-Labeled Platform</th>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <th class="product-heading">Unlimited Training Content</th>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <th class="product-heading">Interactive Quizzes</th>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <th class="product-heading">Multi-tenant Management System</th>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <th class="product-heading">Automated Training Campaigns</th>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <th class="product-heading">Automated Reminders</th>
-                            <td>✓</td>
-                            <td>✓</td>
-                        </tr>
-                        <tr>
-                            <th class="product-heading">Executive Reporting</th>
-                            <td>✓</td>
-                            <td>✓</td>
+                            <td><strong>Free</strong></td>
+                            <td><strong>Pro</strong></td>
                         </tr>
                         <tr>
                             <th class="product-heading">Custom Campaign Templates</th>
-                            <td>✓</td>
-                            <td>✓</td>
+                            <td>&cross;</td>
+                            <td>&check;</td>
                         </tr>
                         <tr>
-                            <th class="product-heading">Just-In-Time Training</th>
-                            <td>✓</td>
-                            <td>✓</td>
+                            <th class="product-heading">Multi-tenant Management System</th>
+                            <td>&cross;</td>
+                            <td>&check;</td>
                         </tr>
                         <tr>
                             <th class="product-heading">Automated Reminders</th>
-                            <td>✓</td>
-                            <td>✓</td>
+                            <td>&cross;</td>
+                            <td>&check;</td>
+                        </tr>
+                        <tr>
+                            <th class="product-heading">Fully White-Labeled Platform</th>
+                            <td>&check;</td>
+                            <td>&check;</td>
+                        </tr>
+                        <tr>
+                            <th class="product-heading">Unlimited Training Content</th>
+                            <td>&check;</td>
+                            <td>&check;</td>
+                        </tr>
+                        <tr>
+                            <th class="product-heading">Interactive Quizzes</th>
+                            <td>&check;</td>
+                            <td>&check;</td>
+                        </tr>
+                        <tr>
+                            <th class="product-heading">Automated Training Campaigns</th>
+                            <td>&check;</td>
+                            <td>&check;</td>
+                        </tr>
+                        <tr>
+                            <th class="product-heading">Automated Reminders</th>
+                            <td>&check;</td>
+                            <td>&check;</td>
+                        </tr>
+                        <tr>
+                            <th class="product-heading">Executive Reporting</th>
+                            <td>&check;</td>
+                            <td>&check;</td>
+                        </tr>
+                        <tr>
+                            <th class="product-heading">Just-In-Time Training</th>
+                            <td>&check;</td>
+                            <td>&check;</td>
                         </tr>
                         <tr>
                             <th class="product-heading">Learning Support Center</th>
-                            <td>✓</td>
-                            <td>✓</td>
+                            <td>&check;</td>
+                            <td>&check;</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -154,7 +148,7 @@
                 </table>
 
                 <section class="">
-                    <h3>Request a Demo or Get in Touch</h3><br>
+                    <h2 class="fs-xxl">Request a Demo or Get in Touch</h2><br>
                     <p>Chat with one of our advisors to get a personalised tour of our platform, answers to any of your questions, and learn how we can help you.</p>
                     
                     <form action="/" method="post">

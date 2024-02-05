@@ -3,12 +3,10 @@
 👉 [Live demo](https://okidokitokiloki.github.io/pricing-page/)
 
 ## General info
-A mockup of a pricing page with an input slider as well as a number input used to calculate product cost per unit (discounts on higher values). The page also contains a sign up form and table of contents.
+A pricing page mockup with an input slider as well as a number input. Used to calculate product cost per unit (discounts on higher values).
 	
 ## Technologies
-Utilizing vanilla frontend technology and manipulating DOM elements in the browser.
-
-Project is created with:
-* HTML
+Created with:
+* HTML 
 * CSS
-* JavaScript
+* TypeScript

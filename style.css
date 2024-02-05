@@ -13,28 +13,13 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* margin: 0;
-    padding: 0; */
     font-family: Montserrat, Helvetica, sans-serif;
     color: #fff;
-    text-align: center;
 }
 
 body {
+    text-align: center;
     background-color: var(--background-col);
-}
-
-@media screen and (min-width: 768px) {
-    body {
-        /* margin: 30px 215px; */
-        margin: 30px;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    body {
-        margin-inline: 450px;
-    }
 }
 
 header {
@@ -42,6 +27,14 @@ header {
     top: 0;
     background-color: var(--background-col);
     z-index: 10;
+}
+
+.fs-l {
+    font-size: larger;
+}
+
+.fs-xxl {
+    font-size: xx-large;
 }
 
 .d-none {
@@ -64,13 +57,6 @@ header {
 
 .d-flex {
     display: flex;
-}
-
-.d-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
-    gap: 10px;
 }
 
 .align-items-center {
@@ -96,7 +82,6 @@ ul {
 
 .nav-link {
     margin-inline: 5px;
-    /* padding: 15px 20px; */
     padding: 15px 10px;
     text-decoration: none;
     border-radius: 6px;
@@ -107,18 +92,6 @@ ul {
     color: var(--primary-col);
     background-color: var(--hover-col);
     cursor: pointer;
-}
-
-@media screen and (min-width: 1024px) {
-    .nav-link {
-        padding: 15px;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .nav-link {
-        padding: 15px 20px;
-    }
 }
 
 .selected {
@@ -135,7 +108,7 @@ ul {
     background-color: #fff;
 }
 
-/* --Request Demo*/
+/* Request Demo */
 .nav-cta {
     padding: 5px 25px;
     text-decoration: none;
@@ -166,28 +139,14 @@ h1 {
 }
 
 .pricing-container {
-    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
-    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 10px;
     margin: 50px 99px;
     padding: 30px;
-    /* height: 165px; */
+    background-color: #fff;
     border-radius: 6px;
-}
-
-@media screen and (min-width: 1024px) {
-    .pricing-container {
-        margin-inline: 205px;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .pricing-container {
-        margin-inline: 200px;
-    }
-}
-
-.pricing-container h2 {
-    font-size: larger;
 }
 
 .pricing-container h2,
@@ -201,7 +160,7 @@ h1 {
     width: 100%;
 }
 
-/* --Custom slider */
+/* Custom slider */
 .pricing-input input[type="range"]{
     -webkit-appearance: none;
     width: 80%;
@@ -245,7 +204,7 @@ h1 {
     cursor: pointer;
 }
 
-/* --Custom number input*/
+/* Custom number input */
 .pricing-input input[type="number"]::placeholder {
     color: #fff;
 }
@@ -274,31 +233,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 5%;
-    /* top: 27%;
-    left: 28%; */
     height: 20%;
-}
-
-@media screen and (min-width: 1024px) {
-    /* .rocket {
-        position: absolute;
-        top: 34%;
-        left: 22%;
-        height: 20%;
-    } */
-    .rocket {
-        top: 42%;
-        left: 11%;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .rocket {
-        /* position: absolute; */
-        top: 27%;
-        left: 28%;
-        /* height: 20%; */
-    }
 }
 
 table {
@@ -371,24 +306,10 @@ td button {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 1024px) {
-    td button {
-        width: 250px;
-        margin-inline: 0;
-    }
-}
-
-table tr:nth-child(2),
-table tr:nth-child(3) {
-    border-color: transparent;
-}
-
+table tr:nth-child(1),
+table tr:nth-last-child(2), 
 table tr:last-child {
-    border-color: transparent;
-}
-
-.bold {
-    font-weight: bold;
+border-color: transparent;
 }
 
 .uppercase {
@@ -396,32 +317,17 @@ table tr:last-child {
 }
 
 section {
-    margin-top: 50px        ;
-}
-
-h3 {
-    font-size: xx-large;
+    margin-top: 50px;
 }
 
 section > p {
     font-size: 18px;
     font-weight: lighter;
     margin-inline: 30px;
-    /* margin: 0 50px;
-    padding: 0 100px; */
-}
-
-@media screen and (min-width: 1024px) {
-    section > p {
-        margin: 0 50px;
-        padding: 0 100px;
-    }
 }
 
 .form-top input,
 form select {
-    /* margin: 50px 20px 20px 20px;
-    padding: 10px; */
     width: 200px;
     padding: 5px;
     margin: 20px 10px;
@@ -430,22 +336,6 @@ form select {
     border-radius: 6px;
     font-weight: lighter;
     font-size: 18px;
-}
-
-@media screen and (min-width: 1024px) {
-    .form-top input,
-    form select {
-        margin: 50px 20px 20px 20px;
-        padding: 10px;
-        width: 250px;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .form-top input,
-    form select {
-        width: 300px;
-    }
 }
 
 form select {
@@ -483,22 +373,80 @@ form input::placeholder {
     font-weight: bold;
 }
 
-/* @media screen and (min-width: 1920px) { */
-    @media screen and (min-width: 768px) {
-        .d-desktop-none {
-            display: none;
-        }
-        
-        .d-desktop-block {
-            display: block;
-        }
+@media screen and (min-width: 768px) {
+    body {
+        margin: 30px;
     }
-    @media screen and (min-width: 1024px) {
-        .d-lg-none {
-            display: none;
-        }
-        
-        .d-lg-block {
-            display: block;
-        }
+
+    .d-desktop-none {
+        display: none;
     }
+    
+    .d-desktop-block {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-link {
+        padding: 15px;
+    }
+
+    .pricing-container {
+        margin-inline: 205px;
+    }
+
+    .rocket {
+        top: 42%;
+        left: 11%;
+    }
+
+    td button {
+        width: 250px;
+        margin-inline: 0;
+    }
+
+    section > p {
+        margin: 0 50px;
+        padding: 0 100px;
+    }
+
+    .form-top input,
+    form select {
+        margin: 50px 20px 20px 20px;
+        padding: 10px;
+        width: 250px;
+    }
+
+    .d-lg-none {
+        display: none;
+    }
+    
+    .d-lg-block {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        margin-inline: 450px;
+    }
+
+    .nav-link {
+        padding: 15px 20px;
+    }
+
+    .pricing-container {
+        margin-inline: 200px;
+    }
+
+    .rocket {
+        top: 27%;
+        left: 28%;
+    }
+
+    .form-top input,
+    form select {
+        width: 300px;
+    }
+}
